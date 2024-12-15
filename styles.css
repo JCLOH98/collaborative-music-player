@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+ * {
+    font-family: "Jua", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playlist-item {
+    @apply flex flex-row align-middle justify-center;
+}
+
+.playlist-link {
+    @apply border-2 my-auto px-2 mx-2 rounded-xl;
+}
+
+.delete-button {
+    @apply border-2 rounded-full p-1 w-8 h-8;
+}
+
+.control-button {
+    @apply border-2 rounded-full py-1 px-2;
+}
+
+#music-player {
+    @apply border-4 flex flex-col justify-center align-middle rounded-full mx-auto;
+    width: 400px;
+    height: 400px;
+}
+
+#music-player-content {
+    @apply mx-auto;
+    width: 250px;
+    height: 250px;
+}
