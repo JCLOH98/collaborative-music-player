@@ -3,6 +3,7 @@
 @tailwind utilities;
  
  * {
+    @apply bg-white;
     font-family: "Jua", serif;
     font-weight: 400;
     font-style: normal;
@@ -21,17 +22,24 @@
 }
 
 .control-button {
-    @apply border-2 rounded-full py-1 px-2;
+    @apply border-2 rounded-full;
+    width: 30px;
+    height: 30px;
 }
 
 #music-player {
-    @apply border-4 flex flex-col justify-center align-middle rounded-full mx-auto;
+    @apply border-2 flex flex-col justify-center align-middle rounded-full mx-auto;
     width: 400px;
     height: 400px;
 }
 
-#music-player-content {
+.music-player-content {
     @apply mx-auto;
     width: 250px;
     height: 250px;
+}
+
+#mp4-player {
+    @apply mx-auto;
+    width: 80%;
 }
