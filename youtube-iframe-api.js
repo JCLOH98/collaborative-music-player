@@ -1,5 +1,5 @@
 // Create a YouTube player
-var youtube_player;
+let youtube_player;
 
 // This function is called when the YouTube API is ready
 function onYouTubeIframeAPIReady() {

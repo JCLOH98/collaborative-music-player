@@ -3,10 +3,13 @@
 @tailwind utilities;
  
  * {
-    @apply bg-white;
     font-family: "Jua", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+html {
+    @apply bg-blue-100;
 }
 
 .playlist-item {
@@ -22,24 +25,71 @@
 }
 
 .control-button {
-    @apply border-2 rounded-full;
-    width: 30px;
-    height: 30px;
+    @apply w-[35px] aspect-square border-2 border-black bg-white  rounded-full hover:-translate-y-1;
 }
 
 #music-player {
-    @apply border-2 flex flex-col justify-center align-middle rounded-full mx-auto;
+    @apply border-2 border-black bg-green-300 rounded-2xl flex flex-col justify-center align-middle mx-auto;
     width: 400px;
-    height: 400px;
+    height: 500px;
+    
 }
-
 .music-player-content {
-    @apply mx-auto;
-    width: 250px;
-    height: 250px;
+    @apply z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    width: 200px;
+    height: 200px;
 }
 
-#mp4-player {
-    @apply mx-auto;
-    width: 80%;
+#vinyl-player {
+    @apply w-full aspect-square flex flex-col justify-start items-center bg-transparent absolute;
+}
+
+#vinyl-disc {
+    @apply w-full aspect-square bg-black rounded-full flex justify-center items-center transition-all;
+}
+
+#vinyl-inner {
+    @apply flex justify-center items-center;
+    @apply border-x-2 border-y-0 border-slate-300 bg-transparent rounded-full aspect-square w-[88%];
+}
+
+#vinyl-inner-2 {
+    @apply flex justify-center items-center;
+    @apply border-x-2 border-y-0 border-slate-300 bg-transparent rounded-full aspect-square w-[90%];
+}
+
+#vinyl-inner-3 {
+    @apply flex justify-center items-center;
+    @apply border-x-2 border-y-0 border-slate-300 bg-transparent rounded-full aspect-square w-[90%];
+}
+
+#vinyl-inner-4 {
+    @apply flex justify-center items-center;
+    @apply border-x-2 border-y-0 border-slate-300 bg-transparent rounded-full aspect-square w-[90%];
+}
+
+#vinyl-inner-5 {
+    @apply flex justify-center items-center;
+    @apply border-x-2 border-y-0 border-slate-300 bg-transparent rounded-full aspect-square w-[90%];
+}
+
+.hide-player {
+    @apply hidden invisible;
+}
+
+.show-player {
+    @apply block visible;
+}
+
+/* #now-playing-text {
+    animation: autoscroll 25s linear infinite;
+} */
+
+@keyframes autoscroll {
+    0% {
+      transform: translateX(100%); /* Start position: off to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End position: off to the left */
+    }
 }

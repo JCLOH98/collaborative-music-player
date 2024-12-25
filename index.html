@@ -16,35 +16,63 @@
     <h1 class="text-3xl font-bold text-center">Collaborative Music Player</h1>
     <h1 class="text-sm text-center">YouTube | SoundCloud | .mp3 | .mp4</h1>
 
-    <div id="music-player" class="flex justify-center">
-        <!-- YouTube -->
-        <!-- <div id="youtube-player" class="border-2 music-player-content"></div> -->
-        <!-- <iframe title="youtube player" id="youtube-player" src="https://www.youtube.com/embed/Kq0i9wAnxFg" frameborder="0" class="border-2 music-player-content" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    <div id="music-player">
+        <div class="w-11/12 mx-auto aspect-square relative bg-transparent">
+            <!-- vinyl-player -->
+            <div id="vinyl-player">
+                <div id="vinyl-disc">
+                    <div id="vinyl-inner">
+                        <div id="vinyl-inner-2">
+                            <div id="vinyl-inner-3">
+                                <div id="vinyl-inner-4">
+                                    <div id="vinyl-inner-5">
+                                    <div class="border-[30px] border-red-500 bg-transparent rounded-full w-1/2 aspect-square"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- content -->
+            <!-- YouTube -->
+            <div id="youtube-player" class="border-2 music-player-content hide-player"></div>
+            <!-- <iframe title="youtube player" id="youtube-player" src="https://www.youtube.com/embed/Kq0i9wAnxFg" frameborder="0" class="border-2 music-player-content" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
-        <!-- SoundCloud -->
-        <!-- <iframe title="soundcloud player" class="music-player-content" id="soundcloud-player" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1943072631&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
+            <!-- SoundCloud -->
+            <iframe id="soundcloud-player" title="soundcloud player" class="music-player-content hide-player"  scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1943072631&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            
 
-        <!-- mp3 -->
-        <!-- <audio id="mp3-player" class="mx-auto" controls>
-            <source src="https://cdn.pixabay.com/audio/2024/09/24/audio_8ef91c0362.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio> -->
-        <!-- <iframe title="mp3 player" id="mp3-player"  class="music-player-content" src="https://cdn.pixabay.com/audio/2024/09/24/audio_8ef91c0362.mp3" allow="autoplay"></iframe> -->
+            <!-- mp3 -->
+            <audio id="mp3-player" class="absolute bg-transparent top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hide-player" controls>
+                <source src="https://cdn.pixabay.com/audio/2024/09/24/audio_8ef91c0362.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <!-- <iframe title="mp3 player" id="mp3-player"  class="music-player-content" src="https://cdn.pixabay.com/audio/2024/09/24/audio_8ef91c0362.mp3" allow="autoplay"></iframe> -->
 
-        <!-- mp4 -->
-        <!-- <video id="mp4-player" controls>
-            <source src="https://cdn.pixabay.com/video/2020/01/05/30902-383991325_large.mp4" type="video/mp4">
-            Your browser does not support the video element.
-        </video> -->
-        <!-- <iframe title="mp4 player" id="mp4-player" class="music-player-content" src="https://cdn.pixabay.com/video/2020/01/05/30902-383991325_large.mp4" allow="autoplay"></iframe> -->
+            <!-- mp4 -->
+            <video id="mp4-player" class="w-4/5 absolute bg-transparent top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hide-player" controls>
+                <source src="https://cdn.pixabay.com/video/2020/01/05/30902-383991325_large.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <!-- <iframe title="mp4 player" id="mp4-player" class="music-player-content" src="https://cdn.pixabay.com/video/2020/01/05/30902-383991325_large.mp4" allow="autoplay"></iframe> -->
+        </div>
 
-    </div>
+        <!-- now playing -->
+        <div id="now-playing-container" class="border-2 rounded-full border-black px-2 bg-blue-100 w-4/6 mx-auto my-5 overflow-x-hidden text-no-wrap relative">
+            <div id="now-playing-text" class="text-nowrap w-fit bg-trasparent">
+                <span>Now Playing:</span> 
+                <span id="now-playing"></span>
+            </div>
+        </div>
 
-    <div id="music-player-controls" class="text-center">
-        <button title="previous" class="control-button"><i class="fa-solid fa-backward"></i></button>
-        <button title="play" id="play" class="control-button"><i class="fa-solid fa-play"></i></button>
-        <button title="pause" id="pause" class="control-button"><i class="fa-solid fa-pause"></i></button>
-        <button title="next" class="control-button"><i class="fa-solid fa-forward"></i></button>
+         <div id="music-player-controls" class="text-center mx-auto bg-transparent">
+            <button title="previous" id="previous" class="control-button"><i class="fa-solid fa-backward"></i></button>
+            <button title="play" id="play" class="control-button"><i class="fa-solid fa-play"></i></button>
+            <button title="pause" id="pause" class="control-button"><i class="fa-solid fa-pause"></i></button>
+            <button title="next" id="next" class="control-button"><i class="fa-solid fa-forward"></i></button>
+        </div>
     </div>
 
     <h3 class="text-xl font-bold text-center">Playlist</h3>
@@ -65,6 +93,7 @@
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="youtube-iframe-api.js"></script>
     <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="soundcloud-player.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
