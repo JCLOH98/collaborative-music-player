@@ -36,5 +36,6 @@ soundcloud_player.bind(SC.Widget.Events.PAUSE, function() {
 // Listen for the "finish" event (when track finishes playing)
 soundcloud_player.bind(SC.Widget.Events.FINISH, function() {
     console.log('SC Track has finished playing');
+    next();
     // alert("SC done");
 });

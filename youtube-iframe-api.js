@@ -6,7 +6,7 @@ function onYouTubeIframeAPIReady() {
     youtube_player = new YT.Player('youtube-player', {
         height: '250',
         width: '250',
-        videoId: 'Kq0i9wAnxFg',  // Replace with the YouTube video ID
+        videoId: 'zrLU1OFmUmI',  // Replace with the YouTube video ID
         events: {
             // 'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange  // Listen for state changes (e.g., video finished)
@@ -36,5 +36,6 @@ function onPlayerStateChange(event) {
     }
     if (event.data == YT.PlayerState.ENDED) {
         console.log("Video has finished playing!");
+        next();
     }
 }
