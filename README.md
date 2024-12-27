@@ -7,13 +7,14 @@ A seamless music player that lets users create and share playlists from multiple
 
 ### YouTube
 - copy the youtube link
-![Copy link]( /images/youtube/copy-link.png)
+![Copy link](/images/youtube/copy-link.png)
 
 ### Soundcloud
 - click share
-![Click share]( /images/soundcloud/click-share.png)
+![Click share](/images/soundcloud/click-share.png)
+
 - select embed and copy code
-![Click embed and copy code]( /images/soundcloud/click-embed-and-copy-code.png)
+![Click embed and copy code](/images/soundcloud/click-embed-and-copy-code.png)
 
 ### mp3 and mp4
 - paste the source link for mp3 and mp4
